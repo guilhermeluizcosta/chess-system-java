@@ -2,13 +2,17 @@ package chess.pieces;
 
 import boardgame.Board;
 import boardgame.Position;
+import chess.ChessMatch;
 import chess.ChessPiece;
 import chess.Color;
 
 public class Knight extends ChessPiece{
+	
+	
 
 	public Knight(Board board, Color color) {
 		super(board, color);
+		
 	}
   
 	
@@ -22,6 +26,9 @@ public class Knight extends ChessPiece{
     	ChessPiece p = (ChessPiece)getBoard().piece(position);
     	return p ==null || p.getColor() != getColor();
     }
+    
+  
+     
 
 	@Override
 	public boolean[][] possibleMoves() {
@@ -78,6 +85,9 @@ public class Knight extends ChessPiece{
 					
 			mat[p.getRow()][p.getColumn()] = true;
 			  }
+		  
+		   
+		    
 		return mat;
 	}
 }
